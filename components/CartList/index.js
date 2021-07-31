@@ -10,6 +10,7 @@ const CartList = () => {
 
   const items = useSelector((state) => state.carts.items);
   const products = useSelector((state) => state.products.products);
+  const user = useSelector((state) => state.users.user);
 
   const cartItems = items
     .map((item) => ({
@@ -19,8 +20,23 @@ const CartList = () => {
     .map((item) => <CartItem item={item} key={item.id} />);
     
     const handleCheckOut=() => {
-      dispatch(checkout())
-      alert("Done successfully")
+      if (user) {dispatch(checkout(items)),
+        alert("Done successfully")
+      }
+      else {
+        alert(
+          "Warning! You must sign in first !", 
+          [
+            {
+              text: "Cancel",
+              style: "cancel",
+            },
+            { text: "Sign In", onPress: () => navigation.navigate("ignin") },
+          ],
+          { cancelable: false }
+        );
+      }
+    
   }
   return (
     <Center flex={1}>

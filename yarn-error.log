@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-numeric-input
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-router-dom
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\Nabeel\AppData\Local\Microsoft\WindowsApps;C:\Users\Nabeel\AppData\Local\GitHubDesktop\bin;C:\Users\Nabeel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Nabeel\AppData\Local\Yarn\bin;C:\Users\Nabeel\AppData\Roaming\npm
@@ -28,7 +28,7 @@ npm manifest:
     },
     "dependencies": {
       "@expo/vector-icons": "^12.0.5",
-      "@react-native-async-storage/async-storage": "^1.15.5",
+      "@react-native-async-storage/async-storage": "~1.15.0",
       "@react-native-community/async-storage": "^1.12.1",
       "@react-native-community/masked-view": "0.1.10",
       "@react-navigation/native": "^5.9.4",
@@ -36,6 +36,7 @@ npm manifest:
       "axios": "^0.21.1",
       "expo": "~42.0.1",
       "expo-status-bar": "~1.0.4",
+      "jwt-decode": "^3.1.2",
       "native-base": "^3.0.3",
       "react": "16.13.1",
       "react-dom": "16.13.1",
@@ -1882,7 +1883,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@react-native-aria/utils/-/utils-0.2.7.tgz#53d1f4a44cad382bd9d1a6b5af6cb86624e70f76"
     integrity sha512-mozajHovHHYjNY28j5lrIzUQ3p3mQ7EnaKlukd0EuSaAwBboPQ1sVK9ToxPLyyixkxGe4pxy+br5ahzd6wlf5Q==
   
-  "@react-native-async-storage/async-storage@^1.15.5":
+  "@react-native-async-storage/async-storage@~1.15.0":
     version "1.15.5"
     resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.15.5.tgz#0d221a5ef1cd7a6494a42fcaad43136d68379afb"
     integrity sha512-4AYehLH39B9a8UXCMf3ieOK+G61wGMP72ikx6/XSMA0DUnvx0PgaeaT2Wyt06kTrDTy8edewKnbrbeqwaM50TQ==
@@ -4737,6 +4738,11 @@ Lockfile:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
     integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
+  
+  jwt-decode@^3.1.2:
+    version "3.1.2"
+    resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
+    integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
   
   kind-of@^1.1.0:
     version "1.1.0"

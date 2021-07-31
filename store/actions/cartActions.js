@@ -1,4 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as types from "../actions/types";
+import instance from "../actions/instance"
 
 export const addItemToCart = (newItem) => ({
   type: types.ADD_ITEM,
@@ -10,6 +12,17 @@ export const removeItemFromCart = (productId) => ({
   payload: productId,
 });
 
-export const checkout = () => ({
-  type: types.CHECKOUT,
-});
+export const checkout = (items) => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.post("/checkout", items);
+      dispatch({
+        type: types.CHECKOUT,
+        payload:[]
+      });
+      AsyncStorage.removeItem(items);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};

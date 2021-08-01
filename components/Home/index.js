@@ -38,7 +38,8 @@ const Home = ({ navigation }) => {
             name="sign-out"
             as={FontAwesome}
             style={{ color: "black" }}
-            onPress={() => dispatch(signout())}
+            onPress={() => dispatch(signout())
+          }
            
           />
         )}
